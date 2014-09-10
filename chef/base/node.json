@@ -1,0 +1,20 @@
+{
+  "apache": {
+    "default_site_enabled": true,
+    "default_modules": ["status","alias","auth_basic","autoindex","dir","env","mime","negotiation","setenvif"]
+  },
+
+  "java": {
+    "install_flavor": "oracle",
+    "jdk_version": "7",
+    "oracle": {
+      "accept_oracle_download_terms": true
+    }
+  },
+
+  "run_list": [
+    "recipe[opencoral::default]",
+    "recipe[opencoral::prerequisites]",
+    "recipe[opencoral::ssh]"
+  ]
+}

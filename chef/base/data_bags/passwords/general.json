@@ -1,0 +1,39 @@
+{
+  "id": "general",
+  "postgres": {
+    "encrypted_data": "f33ql0huE/5042mHKWs8OdFZGiz2FYtWuVuIMtl0qX0=\n",
+    "iv": "Pd8He9lAzX4L2dyIFF7ZwQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "coraldba": {
+    "encrypted_data": "PLZaP5COl44doG7+BjwTfjeAwhnIT50NZrQ8OlYe7YA=\n",
+    "iv": "YVJjr1WZdqKNj/4eRMMbPg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "root": {
+    "encrypted_data": "ySnJWHogOnNwcBA9WLqr7IS41K+Rq7uX/TyrXQFEJbsBUDTccifD5j8XVcTv\nta7A\n",
+    "iv": "s1OxOYmJ+tUZYyIPRC5Taw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "coral_signstore": {
+    "encrypted_data": "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\nKVy0dq4=\n",
+    "iv": "RViwQW4r7yoMpD8887YxkA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "coral_storepass": {
+    "encrypted_data": "Apwh2w/v8JDA+y1dN8sDeKVL8d5fp5gJmULHE1O2RJtA51Fh6bGBUof0Se+x\nwIoz\n",
+    "iv": "5NE2lHrJ/2mpH12XeIywWA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "coral_keypass": {
+    "encrypted_data": "DecLobUrEcys8j4+JdD6Wn8EYBvIVCHMhlXO77X1il4=\n",
+    "iv": "AGRRs3l908ZbRIxY8dxnlA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
