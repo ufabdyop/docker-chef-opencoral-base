@@ -41,7 +41,7 @@ RUN cd /chef; /opt/chef/embedded/bin/librarian-chef install
 RUN cd /chef; chef-solo -c solo.rb -j node.json -o 'opencoral_prerequisites::dnsmasq'
 
 ### Clean up
-# RUN rm -rf /opencoral /chef /opt
+RUN /bin/bash -c 'rm -rf /chef/jdk*tar.gz /chef/secret'
 
 # ssh
 EXPOSE 22
