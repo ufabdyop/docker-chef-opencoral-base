@@ -8,4 +8,5 @@ Building
 docker build -t docker.nanofab.utah.edu:5000/chef-opencoral-base .
 docker run -d --name coralbase chef-opencoral-base
 docker export coralbase | docker import - docker.nanofab.utah.edu:5000/chef-opencoral-base
+docker push docker.nanofab.utah.edu:5000/chef-opencoral-base
 
