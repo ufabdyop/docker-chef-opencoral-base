@@ -1,5 +1,4 @@
 #!/bin/bash
 service apache2 start
 service dnsmasq start
-opencoral-dev start
 /usr/sbin/sshd -D
