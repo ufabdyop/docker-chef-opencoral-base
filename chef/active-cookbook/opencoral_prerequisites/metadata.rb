@@ -12,4 +12,7 @@ depends "apache2"
 depends "git"
 depends "java"
 depends "runit"
+<<<<<<< HEAD
 depends "maven"
+=======
+>>>>>>> a2fd5a0ee0caeb0cf74ac0b2188964d44e4f3f90

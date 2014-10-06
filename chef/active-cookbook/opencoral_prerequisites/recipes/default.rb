@@ -17,7 +17,10 @@ include_recipe 'apt'
 include_recipe 'apache2'
 include_recipe 'git'
 include_recipe 'runit'
+<<<<<<< HEAD
 include_recipe 'maven'
+=======
+>>>>>>> a2fd5a0ee0caeb0cf74ac0b2188964d44e4f3f90
 
 link "/usr/bin/ant" do
   to "/usr/local/ant-1.8.2/bin/ant"
