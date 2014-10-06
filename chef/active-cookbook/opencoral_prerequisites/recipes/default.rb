@@ -16,6 +16,8 @@ include_recipe 'ant::install_source'
 include_recipe 'apt'
 include_recipe 'apache2'
 include_recipe 'git'
+include_recipe 'runit'
+include_recipe 'maven'
 
 link "/usr/bin/ant" do
   to "/usr/local/ant-1.8.2/bin/ant"
