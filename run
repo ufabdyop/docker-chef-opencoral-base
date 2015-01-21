@@ -1,4 +1,5 @@
 #!/bin/bash
 service apache2 start
 service dnsmasq start
+service postgresql start
 /usr/sbin/sshd -D
