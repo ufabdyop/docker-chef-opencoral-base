@@ -4,8 +4,6 @@ FROM ubuntu
 RUN apt-get -y update
 RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
-RUN echo 'root:quietPlease!' |chpasswd
-RUN sed -i 's/^PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # ssh
 EXPOSE 22
@@ -39,6 +37,22 @@ ADD chef/active-cookbook/opencoral_prerequisites/files/default/dnsmasq.hostsfile
 ADD chef/active-cookbook/opencoral_prerequisites/files/default/resolv.dnsmasq.conf  /chef/vendor/cookbooks/opencoral_prerequisites/files/default/resolv.dnsmasq.conf
 RUN cd /chef; /opt/chef/embedded/bin/librarian-chef install
 RUN cd /chef; chef-solo -c solo.rb -j node.json -o 'opencoral_prerequisites::dnsmasq'
+
+### Install DB
+ADD chef/active-cookbook/opencoral_prerequisites/files/default                                   /chef/vendor/cookbooks/opencoral_prerequisites/files/default
+ADD chef/active-cookbook/opencoral_prerequisites/files/default/pg_hba.conf                       /chef/vendor/cookbooks/opencoral_prerequisites/files/default/pg_hba.conf
+ADD chef/active-cookbook/opencoral_prerequisites/files/default/Pg83-implicit-casts.sql_id22      /chef/vendor/cookbooks/opencoral_prerequisites/files/default/Pg83-implicit-casts.sql_id22
+ADD chef/active-cookbook/opencoral_prerequisites/files/default/postgresql.key                    /chef/vendor/cookbooks/opencoral_prerequisites/files/default/postgresql.key
+ADD chef/active-cookbook/opencoral_prerequisites/files/default/postgresql.pem                    /chef/vendor/cookbooks/opencoral_prerequisites/files/default/postgresql.pem
+ADD chef/base/vendor/cookbooks/postgresql                                         /chef/vendor/cookbooks/postgresql
+ADD chef/active-cookbook/opencoral_prerequisites/recipes/database.rb                 /chef/vendor/cookbooks/opencoral_prerequisites/recipes/database.rb
+RUN cd /chef; /opt/chef/embedded/bin/librarian-chef install
+RUN cd /chef; chef-solo -c solo.rb -j node.json -o 'opencoral_prerequisites::database'
+
+# ### Set Locale
+ADD  chef/active-cookbook/opencoral_prerequisites/recipes/set_locale.rb                /chef/vendor/cookbooks/opencoral_prerequisites/recipes/set_locale.rb
+RUN cd /chef; /opt/chef/embedded/bin/librarian-chef install
+RUN cd /chef; chef-solo -c solo.rb -j node.json -o 'opencoral_prerequisites::set_locale'
 
 ### Clean up
 RUN /bin/bash -c 'rm -rf /chef/jdk*tar.gz /chef/secret'

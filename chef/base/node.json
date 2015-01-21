@@ -12,6 +12,16 @@
     }
   },
 
+  "postgresql": {
+    "password": {
+      "postgres": "postgresPassword"
+    },
+    "config": {
+      "ssl_cert_file": "/etc/ssl/certs/postgresql.pem",
+      "ssl_key_file": "/etc/ssl/private/postgresql.key",
+      "listen_addresses": "*"
+    }
+  },
   "run_list": [
     "recipe[opencoral::default]",
     "recipe[opencoral::dnsmasq]"
