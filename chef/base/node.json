@@ -23,7 +23,9 @@
     }
   },
   "run_list": [
-    "recipe[opencoral::default]",
-    "recipe[opencoral::dnsmasq]"
+    "recipe[opencoral_prerequisites::default]",
+    "recipe[opencoral_prerequisites::dnsmasq]",
+    "recipe[opencoral_prerequisites::database]",
+    "recipe[opencoral_prerequisites::set_locale]"
   ]
 }
