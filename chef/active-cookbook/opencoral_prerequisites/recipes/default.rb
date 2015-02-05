@@ -25,6 +25,10 @@ link "/usr/bin/ant" do
   to "/usr/local/ant-1.8.2/bin/ant"
 end
 
+link "/usr/local/bin/mvn" do
+  to "/usr/local/maven/bin/mvn"
+end
+
 package "ca-certificates" 
 package "cvs"
 package "rsync"
