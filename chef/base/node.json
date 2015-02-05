@@ -4,6 +4,10 @@
     "default_modules": ["status","alias","auth_basic","autoindex","dir","env","mime","negotiation","setenvif"]
   },
 
+  "ant": {
+    "version": "1.9.4"
+  },
+
   "java": {
     "install_flavor": "oracle",
     "jdk_version": "7",

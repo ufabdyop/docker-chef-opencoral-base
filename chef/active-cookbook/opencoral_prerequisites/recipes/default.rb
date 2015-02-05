@@ -12,6 +12,8 @@
 
 include_recipe 'java'
 include_recipe 'java::oracle'
+
+#node.override['ant']['version'] = '1.9.4'
 include_recipe 'ant::install_source'
 include_recipe 'apt'
 include_recipe 'apache2'
