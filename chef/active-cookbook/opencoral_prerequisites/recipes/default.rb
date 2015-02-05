@@ -13,7 +13,6 @@
 include_recipe 'java'
 include_recipe 'java::oracle'
 
-#node.override['ant']['version'] = '1.9.4'
 include_recipe 'ant::install_source'
 include_recipe 'apt'
 include_recipe 'apache2'
@@ -22,7 +21,7 @@ include_recipe 'runit'
 include_recipe 'maven'
 
 link "/usr/bin/ant" do
-  to "/usr/local/ant-1.8.2/bin/ant"
+  to "/usr/local/ant/bin/ant"
 end
 
 link "/usr/local/bin/mvn" do
