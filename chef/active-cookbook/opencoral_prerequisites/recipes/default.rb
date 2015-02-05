@@ -13,7 +13,7 @@
 include_recipe 'java'
 include_recipe 'java::oracle'
 
-include_recipe 'ant::install_source'
+include_recipe 'opencoral_prerequisites::ant'
 include_recipe 'apt'
 include_recipe 'apache2'
 include_recipe 'git'
