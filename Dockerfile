@@ -34,4 +34,5 @@ EXPOSE 22
 # replace this with your main file
 ADD run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
+RUN apt-get install -y icedtea-netx
 CMD [ "/usr/local/bin/run" ]
