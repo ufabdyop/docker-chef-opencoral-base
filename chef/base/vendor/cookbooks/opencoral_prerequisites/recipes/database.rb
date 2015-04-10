@@ -16,6 +16,7 @@ end
 
 user "postgres" do
   action :create
+  uid 1001
 end
 
 group "ssl-cert" do

@@ -9,11 +9,10 @@ RUN apt-get -y update && \
 	(curl -L https://www.opscode.com/chef/install.sh | bash) && \
 	(echo "gem: --no-ri --no-rdoc" > ~/.gemrc) && \
 	/opt/chef/embedded/bin/gem install librarian-chef  && \
-	mv /chef-cookbooks /chef && \
 	(cd /chef; /opt/chef/embedded/bin/librarian-chef install) && \
 	(cd /chef; chef-solo -c solo.rb -j node.json) && \
 	apt-get install -y icedtea-netx && \
-	rm -rf /chef /var/lib/apt/lists/* /chef-cookbooks
+	rm -rf /chef /var/lib/apt/lists/* 
 
 # ssh
 EXPOSE 22

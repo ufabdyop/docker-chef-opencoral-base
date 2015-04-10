@@ -42,3 +42,7 @@ package "libxtst6"
 package "libxi6"
 package "libgconf-2-4"
 
+user "coral" do
+  action :create
+  uid 1000
+end
