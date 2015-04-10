@@ -45,4 +45,6 @@ package "libgconf-2-4"
 user "coral" do
   action :create
   uid 1000
+  home "/home/coral"
+  shell "/bin/bash"
 end
