@@ -11,7 +11,7 @@
 # node.override['postgresql']['password']['postgres'] = passwords['postgres']
 
 include_recipe 'java'
-include_recipe 'java::openjdk'
+include_recipe 'java::oracle'
 
 include_recipe 'opencoral_prerequisites::ant'
 include_recipe 'apt'
